@@ -1,0 +1,17 @@
+service: awsoverflow
+
+provider:
+  name: aws
+  runtime: python3.6
+  versionFunctions: false
+  memorySize: 128
+  region: us-west-2
+
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: echo/hello
+          method: get
