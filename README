@@ -1,0 +1,48 @@
+Running python lambda and api gateway locally.
+
+Docker
+First we need docker
+https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac
+
+Install docker
+Open preferences and share the local directory with docker
+
+cd into your project root
+
+
+Plugins
+The plugins we’re going to use require docker. Now that we have it we need to add the simulate and python requirements plugin to our environment.
+
+
+Initialize your a node project
+
+npm init -y
+
+
+Serverless simulate doesn't come with request anymore and we need. So, install it.
+
+npm install request --save
+
+
+Search for the plugin. -q means query
+
+sls plugin search -q simulate
+
+
+Install the simulate plugin
+
+sls plugin install -n serverless-plugin-simulate
+
+
+We want to have serverless manage our python requirements for us. This means when you add a architecture
+dependant py package like lxml you need to run pip install on a server similar to lambda in order to get the correct c header compiled files.
+serverless-python-requirements takes care of this for us.
+
+sls plugin search -q requirements
+sls plugin install -n serverless-python-requirements
+
+
+Open two terminals and within your working project directory run the two commands in order.
+simulate lambda must be started first as apigateway needs to bind to the lambda port.
+sls simulate lambda -p 4000
+sls simulate apigateway -p 5000 --lambda-port 4000
