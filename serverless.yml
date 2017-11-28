@@ -15,3 +15,7 @@ functions:
       - http:
           path: echo/hello
           method: get
+
+plugins:
+  - serverless-plugin-simulate
+  - serverless-python-requirements

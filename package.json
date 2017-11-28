@@ -1,0 +1,27 @@
+{
+  "name": "awsoverflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knittledan/awsoverflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knittledan/awsoverflow/issues"
+  },
+  "homepage": "https://github.com/knittledan/awsoverflow#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "serverless-plugin-simulate": "0.0.17",
+    "serverless-python-requirements": "^3.0.10"
+  }
+}

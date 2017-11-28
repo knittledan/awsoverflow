@@ -20,3 +20,6 @@ var/
 __pycache__/*
 # Serverless directories
 .serverless
+node_modules
+.sls-simulate*
+package-lock.json

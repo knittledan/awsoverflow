@@ -5,7 +5,7 @@ def hello(event, context):
     try:
         return dict(
             statusCode=200,
-            body=json.dumps(event)
+            body="Simple hello"
         )
     except Exception as e:
         return dict(
