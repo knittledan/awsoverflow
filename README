@@ -1,0 +1,19 @@
+Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Nodejs
+brew install node
+
+mkdir yourProject
+cd yourProject
+
+Serverless
+https://serverless.com/
+
+npm install serverless -g
+serverless create --template aws-python3
+
+serverless config credentials --provider aws --key YOUR-KEY --secret YOUR-SECRET
+
+
+serverless deploy --stage dev
